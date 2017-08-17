@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drum JS</title>
+  </head>
+  <body>
+    <div>
+      <kbd>A</kbd>
+      <span>Boom</span>
+    </div>
+
+    <div>
+      <audio key-code="KeyA" src="sounds/boom.wav"></audio>
+      <audio key-code="KeyS" src="sounds/clap.wav"></audio>
+      <audio key-code="KeyD" src="sounds/hihat.wav"></audio>
+      <audio key-code="KeyF" src="sounds/kick.wav"></audio>
+      <audio key-code="KeyG" src="sounds/openhat.wav"></audio>
+      <audio key-code="KeyH" src="sounds/ride.wav"></audio>
+      <audio key-code="KeyJ" src="sounds/snare.wav"></audio>
+      <audio key-code="KeyK" src="sounds/tink.wav"></audio>
+      <audio key-code="KeyL" src="sounds/tom.wav"></audio>
+    </div>
+
+    <script type="text/javascript">
+      const audioPlay = e => {
+        // playing audio
+        let audio = document.querySelector(`audio[key-code="${e.code}"]`);
+        if( !audio ) return;
+        audio.currentTime = 0;
+        audio.play();
+
+        //
+
+      }
+
+      window.addEventListener('keydown', audioPlay)
+
+    </script>
+
+  </body>
+</html>
