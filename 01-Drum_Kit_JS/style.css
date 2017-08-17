@@ -1,0 +1,12 @@
+.key{
+  transition: all .03s
+}
+
+.playing{
+  transform: scale(1.01);
+  color: blue
+}
+
+kbd{
+  display: block;
+}
